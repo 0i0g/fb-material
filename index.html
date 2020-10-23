@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./node_modules/tippy.js/dist/tippy.css">
+    <link rel="stylesheet" href="./node_modules/tippy.js/animations/scale.css">
+    <link rel="stylesheet" href="./node_modules/tippy.js/themes/light-border.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container" style="max-width: 768px;">
+        <!-- POST -->
+        <div class="post">
+            <!-- header -->
+            <div class="post__header">
+                <div class="user__idea mt-0 avatar-lg">
+                    <div class="avatar" style="background-image: url(/img/user-avatar.jpg);">
+                    </div>
+                    <div class="content">
+                        <p class="text-bold">
+                            <a href="#" class="ef-underline">Nguyễn Minh Hoàng</a>
+                            <i class="fa fa-caret-right caret" aria-hidden="true"></i>
+                            <a href="#" class="ef-underline">Nguyễn Minh Hoàng</a>
+                        </p>
+                        <p class="text-sm">27/09/2020</p>
+                    </div>
+                    <div class="action yppit">
+                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                        <div class="action__menu d-none">
+                            <a href="#" class="action__menu-item"><i class="fa fa-trash mr-2" aria-hidden="true"></i>Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end header -->
+
+            <!-- body -->
+            <div class="post__body">
+                <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo inventore sed doloribus aliquam dolores at quasi facilis odio deserunt repudiandae, nisi delectus beatae eos alias eius maxime aperiam vitae pariatur.</p>
+                <!-- reaction count -->
+                <div class="reaction-count">
+                    <div class="like-times"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>100</span></div>
+                    <div class="comment-times">
+                        <span>11 comment</span>
+                        <!-- <span>11 share</span> -->
+                    </div>
+                </div>
+                <!-- end reaction count -->
+            </div>
+            <!-- end body -->
+
+            <div class="post__footer">
+
+                <!-- reaction -->
+                <div class="reaction">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-success">Like</button>
+                        <button type="button" class="btn btn-outline-info" onclick="focusCmt('#post-id-123-input-comment')">Comment</button>
+                    </div>
+                </div>
+
+                <!-- end reaction -->
+
+                <!-- leave comment -->
+                <div class="user__idea">
+                    <div class="avatar" style="background-image: url(/img/user-avatar.jpg);">
+                    </div>
+                    <div class="content">
+                        <!-- conent -->
+                        <form action="#">
+                            <div class="input-comment text" data-empty="Comment" placeholder="Comment" contenteditable="true" id="post-id-123-input-comment"></div>
+                            <input type="hidden">
+                        </form>
+                        <!-- end conent -->
+                    </div>
+                </div>
+                <!-- end leave comment -->
+
+                <!-- use comment -->
+                <div class="user__idea comment">
+                    <div class="avatar" style="background-image: url(/img/user-avatar.jpg);">
+                    </div>
+                    <div class="content">
+                        <!-- conent -->
+                        <p class="text">
+                            <span class="text-bold">
+                            <a href="#" class="ef-underline">Nguyễn Minh Hoàng</a>
+                        </span> First Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores enim ab tempore iure aliquid expedita voluptatibus voluptatum dolorem? Corporis porro sed pariatur omnis sapiente laudantium
+                            voluptatum aliquid iusto, numquam natus.</p>
+                        <!-- end conent -->
+                        <!-- comment-reaction -->
+                        <div class="comment-reaction">
+                            <div class="like-times">
+                                <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i>100</a>
+                            </div>
+                            <div class="leave-comment">
+                                <a href="#" onclick="showInputSubComment('#post-id-124-input-comment')">comment</a>
+                            </div>
+                        </div>
+                        <!-- end comment-reaction -->
+                        <!-- sub user comment -->
+                        <div class="user__idea comment">
+                            <div class="avatar" style="background-image: url(/img/user-avatar.jpg);">
+                            </div>
+                            <div class="content">
+                                <!-- conent -->
+                                <p class="text">
+                                    <span class="text-bold">
+                                    <a href="#" class="ef-underline">Nguyễn Minh Hoàng</a>
+                                </span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores enim ab tempore iure aliquid expedita voluptatibus voluptatum dolorem? Corporis porro sed pariatur omnis sapiente
+                                    laudantium voluptatum aliquid iusto, numquam natus.</p>
+                                <!-- end conent -->
+                                <!-- comment-reaction -->
+                                <div class="comment-reaction">
+                                    <div class="like-times active">
+                                        <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i>100</a>
+                                    </div>
+                                    <div class="leave-comment">
+                                        <a href="#" onclick="showInputSubComment('#post-id-124-input-comment')">comment</a>
+                                    </div>
+                                </div>
+                                <!-- end comment-reaction -->
+
+                            </div>
+                            <div class="action yppit">
+                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                <div class="action__menu d-none">
+                                    <a href="#" class="action__menu-item text-danger"><i class="fa fa-trash mr-2" aria-hidden="true"></i>Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end sub user comment -->
+                        <!-- leave comment -->
+                        <div class="user__idea sub-comment">
+                            <div class="avatar" style="background-image: url(/img/user-avatar.jpg);">
+                            </div>
+                            <div class="content">
+                                <!-- conent -->
+                                <form action="#">
+                                    <div class="input-comment text comment-input-leave-focus-hide" data-empty="Comment" placeholder="Comment" contenteditable="true" id="post-id-124-input-comment"></div>
+                                    <input type="hidden">
+                                </form>
+                                <!-- end conent -->
+                            </div>
+                        </div>
+                        <!-- end leave comment -->
+                    </div>
+                    <div class="action yppit">
+                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                        <div class="action__menu d-none">
+                            <a href="#" class="action__menu-item"><i class="fa fa-trash mr-2" aria-hidden="true"></i>Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end use comment -->
+
+            </div>
+        </div>
+        <!-- End POST -->
+    </div>
+
+    <div id="template" style="display: none;">
+        <strong>Bolded content</strong>
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/tippy.js/dist/tippy-bundle.umd.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
